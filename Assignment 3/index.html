@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coachella Music Festival Survey</title>
+  <link type="text/css" rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Coachella Music Festival Survey</h1>
+  </header>
+  <main>
+    <div class="view-container">
+      <div class="screen-selectors">
+        <label tabindex="1" for="screen-1-checkbox"> <h3>Introduction</h3></label>
+        <label tabindex="2" for="screen-2-checkbox"> <h3>Your Music Preferences</h3></label>
+        <label tabindex="3" for="screen-3-checkbox"> <h3>Feedback on Past Coachella</h3></label>
+      </div>
+      <input class="screen-radio-button" type="radio" name="current-screen" id="screen-1-checkbox" />
+      <input class="screen-radio-button" type="radio" name="current-screen" id="screen-2-checkbox" />
+      <input class="screen-radio-button" type="radio" name="current-screen" id="screen-3-checkbox" />
+      <div class="screen screen-1">
+        <div class="content">
+          <h1>Welcome to the Coachella Music Festival Survey!</h1>
+          <p>
+            Thank you for participating in our survey. Your feedback is important to us.
+          </p>
+          <h2>How it works</h2>
+          <div class="how-it-works">
+            <ul>
+              <li>Answer a few questions about your music preferences.</li>
+              <li>Share your thoughts on past Coachella experiences.</li>
+              <li>Help us make Coachella even better!</li>
+            </ul>
+          </div>
+          <label for="screen-2-checkbox">
+            <div class="button">Start Survey</div>
+          </label>
+        </div>
+      </div>
+      <div class="screen screen-2">
+        <div class="content">
+          <h1>Your Music Preferences</h1>
+          <h2>What genres of music are you most interested in?</h2>
+          <ul>
+            <li>
+              <input type="checkbox" id="pop" /><label for="pop">Pop</label>
+            </li>
+            <li>
+              <input type="checkbox" id="rock" /><label for="rock">Rock</label>
+            </li>
+            <li>
+              <input type="checkbox" id="hip-hop" /><label for="hip-hop">Hip Hop</label>
+            </li>
+            <li>
+              <input type="checkbox" id="electronic" /><label for="electronic">Electronic</label>
+            </li>
+          </ul>
+          <label for="screen-3-checkbox">
+            <div class="button">Next</div>
+          </label>
+        </div>
+      </div>
+      <div class="screen screen-3">
+        <div class="content">
+          <h1>Feedback on Past Coachella Experiences</h1>
+          <h2>Have you attended Coachella before?</h2>
+          <input type="radio" name="attendance" id="yes" /><label for="yes">Yes</label>
+          <input type="radio" name="attendance" id="no" /><label for="no">No</label>
+          <h2>If yes, please share your favorite performance or memory:</h2>
+          <textarea id="favorite-memory" rows="4" cols="50"></textarea>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <!-- Your footer content goes here -->
+  </footer>
+</body>
+</html>

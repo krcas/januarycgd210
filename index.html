@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="styles/styles.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      header {
+        animation: fadeIn 1s ease-in-out;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .hamburger-container {
+        cursor: pointer;
+        display: inline-block;
+        padding: 15px;
+      }
+
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
+
+      .checkbox:checked + .hamburger-container .hamburger span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .checkbox:checked + .hamburger-container .hamburger span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .checkbox:checked + .hamburger-container .hamburger span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+
+      nav {
+        display: none;
+        animation: slideIn 0.5s ease-in-out; /* Apply slideIn animation to the navigation */
+      }
+
+      .checkbox:checked + .hamburger-container + nav {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        padding: 10px;
+        text-align: center;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .checkbox:checked + .hamburger-container + nav li {
+        transform: translateX(0);
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CGD210 Assignments</h1>
+      <input id="checkbox" class="checkbox" type="checkbox" />
+      <label class="hamburger-container" for="checkbox">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+      <nav>
+        <ul>
+          <li>
+            <a href="/Assignment 1/">Assignment1</a>
+          </li>
+          <li>
+            <a href="/Assignment 2/">Assignment2</a>
+          </li>
+          <li>
+            <a href="/Assignment 3/">Assignment3</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main></main>
+  </body>
+</html>

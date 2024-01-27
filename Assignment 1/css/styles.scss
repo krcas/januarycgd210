@@ -1,0 +1,114 @@
+$neon-color: #00ff00; // Adjust the color as needed
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #111;
+  color: $neon-color;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: $neon-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px $neon-color, 0 0 20px $neon-color, 0 0 30px $neon-color;
+  }
+  to {
+    text-shadow: 0 0 20px $neon-color, 0 0 40px $neon-color, 0 0 60px $neon-color;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  animation: neon 1s ease-in-out infinite alternate;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+section#home {
+  background-color: #111;
+  color: $neon-color;
+}
+
+section#home h1 {
+  animation: neon 1s ease-in-out infinite alternate;
+}
+
+section#portfolio {
+  background-color: #222;
+  color: $neon-color;
+  overflow: hidden;
+
+  h1 {
+    animation: neon 1s ease-in-out infinite alternate;
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  img {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .marquee {
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+}
+
+footer {
+  background-color: #111;
+  color: $neon-color;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
